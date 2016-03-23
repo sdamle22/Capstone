@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>MAS DASHBOARD</title>
+    <title>CVIS MAS Performance</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 	<!-- angular-chart css 
@@ -37,141 +37,96 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <![endif]-->
   </head>
   
-  <!--
-  BODY TAG OPTIONS:
-  =================
-  Apply one or more of the following classes to get the
-  desired effect
-  |---------------------------------------------------------|
-  | SKINS         | skin-blue                               |
-  |               | skin-black                              |
-  |               | skin-purple                             |
-  |               | skin-yellow                             |
-  |               | skin-red                                |
-  |               | skin-green                              |
-  |---------------------------------------------------------|
-  |LAYOUT OPTIONS | fixed                                   |
-  |               | layout-boxed                            |
-  |               | layout-top-nav                          |
-  |               | sidebar-collapse                        |
-  |               | sidebar-mini                            |
-  |---------------------------------------------------------|
-  -->
-  <body class="hold-transition skin-blue-light sidebar-mini">
+  <body class="hold-transition skin-blue-light layout-top-nav">
     <div class="wrapper">
 
       <!-- Main Header -->
       <header class="main-header">
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="#">Kaiser Permanente</a>
+			</div>
 
-        <!-- Logo -->
-        <a href="index2.html" class="logo">
-          <!-- mini logo for sidebar mini 50x50 pixels -->
-          <span class="logo-mini"><b>KP</b></span>
-          <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>Kaiser Permanente</b></span> 
-        </a>
-
-        <!-- Header Navbar -->
-        <nav class="navbar navbar-default" role="navigation">
-          <!-- Sidebar toggle button-->
-          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-            <span class="sr-only">Toggle navigation</span>
-          </a>
-          <ul class="nav navbar-nav">
-			<li role="presentation" ><a href="#" style="padding-right: 50px; padding-left: 10px;">MII Home&nbsp;&nbsp;<i class="fa fa-tachometer"></i></a></li>
-			<li role="presentation"><a href="#" style="padding-right: 50px; padding-left: 50px;"><i class="fa fa-circle text-danger"></i>&nbsp;&nbsp;EMIA&nbsp;&nbsp;<i class="fa fa-bar-chart-o"></i></a></li>
-			<li role="presentation"><a href="#" style="padding-right: 50px; padding-left: 50px;"><i class="fa fa-circle text-success"></i>&nbsp;&nbsp;RIS&nbsp;&nbsp;<i class="fa fa-area-chart"></i></a></li>
-			<li role="presentation" class="active"><a href="#" style="padding-right: 50px; padding-left: 50px;"><i class="fa fa-circle text-danger"></i>&nbsp;&nbsp;CVIS&nbsp;&nbsp;<i class="fa fa-line-chart"></i></a></li>
-			<li role="presentation"><a href="#" style="padding-right: 50px; padding-left: 50px;">CID</a></li>
-		  </ul>
-		   <!-- Navbar Right Menu -->
-          <div class="navbar-custom-menu">
-            <ul class="nav navbar-nav">
-              <!-- User Account Menu -->
-              <li class="dropdown user user-menu">
-                <!-- Menu Toggle Button -->
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <!-- The user image in the navbar-->
-                  <!-- <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image"> -->
-				  <img src="logo/Kaiser-Permanente-Logo.png" class="user-image img-thumbnail" alt="User Image">
-                  <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                  <span class="hidden-xs">John Edwards</span>
-                </a>
-                <ul class="dropdown-menu">
-                  <!-- The user image in the menu -->
-                  <li class="user-header">
-                    <img src="logo/Kaiser-Permanente-Logo.png" class="img-thumbnail" alt="User Image">
-                    <p>
-                      John D Edwards 
-                      <small>Medical Imaging Informatics</small>
-                    </p>
-                  </li>
-                  <!-- Menu Footer-->
-                  <li class="user-footer">
-                    <div class="text-center">
-                      <button  class="btn btn-primary btn-flat" >Sign out&nbsp;&nbsp;&nbsp;&nbsp;<span class="fa fa-sign-out"></span></button>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </nav>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			  <ul class="nav navbar-nav">
+				<li><a href="MII_home.html">MII home <span class="sr-only">(current)</span></a></li>
+				<li><a href="#">EMIA</a></li>
+				<li class="dropdown">
+                    <a href="RIS.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">RIS<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+					<li><a href="RIS.html">RIS Home</a></li>
+					<li><a href="#">SCAL</a></li>
+                    <li><a href="#">COL</a></li>
+                    <li><a href="#">MAS</a></li>
+                    <li><a href="#">RIS Tools</a></li>
+				    </ul>
+                </li>
+				<li class="dropdown">
+                  <a href="HOME_KP.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CVIS<span class="caret"></span></a>
+				  <ul class="dropdown-menu">
+					<li><a href="HOME_KP.html">CVIS Home</a></li>
+					<li><a href="SCAL_KP.html">SCAL</a></li>
+                    <li class="active"><a href="MAS_KP.html">MAS</a></li>
+				  </ul>
+                </li>
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More Applications <span class="caret"></span></a>
+				  <ul class="dropdown-menu">
+					<li><a href="#">Viewpoint</a></li>
+					<li><a href="#">eScription</a></li>
+					<li><a href="#">PS360</a></li>
+					<li role="separator" class="divider"></li>
+					<li><a href="#">CID</a></li>
+				  </ul>
+				</li>
+			  </ul>
+			  <ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">John Edwards <span class="caret"></span></a>
+				  <ul class="dropdown-menu">
+					<li><a href="#">Sign out</a></li>
+					<li role="separator" class="divider"></li>
+					<li><a href="#">Help</a></li>
+				  </ul>
+				</li>
+			  </ul>
+			</div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
       </header>
-      <!-- Left side column. contains the logo and sidebar -->
-      <aside class="main-sidebar">
-
-        <!-- sidebar: style can be found in sidebar.less -->
-        <section class="sidebar">
-          <!-- Sidebar Menu -->
-          <ul class="sidebar-menu">
-            <li class="header"><b>Regional Information</b></li>
-            <!-- Optionally, you can add icons to the links -->
-			<li class="treeview">
-              <!-- <a href="#"><i class="fa fa-link"></i> <span>CVIS</span> <i class="fa fa-angle-left pull-right"></i></a> -->
-              <a href="HOME_KP.html"><i class="fa fa-line-chart"></i> <span>CVIS</span> <i class="fa fa-angle-left pull-right"></i></a>
-			  <ul class="treeview-menu">
-                <li><a href="SCAL_KP.html"><i class="fa fa-circle text-success"></i><span>SCAL</span></a></li>
-                <li><a href="MAS_KP.html"><i class="fa fa-circle text-danger"></i><span>MAS</span></a></li>
-              </ul>
-            </li>
-            
-          </ul><!-- /.sidebar-menu -->
-        </section>
-        <!-- /.sidebar -->
-      </aside>
-
+     
       <!-- Content Wrapper. Contains page content -->
      <div class="content-wrapper"> 
         <!-- Main content -->
-        <!-- <section class="content"> -->
+        <!-- <section class="content"> -->			
 			<div class="row">
-			<div class="col-mid-6">
-			<!-- BAR CHART -->
-             <!--  </div><!-- /.box -->
-				<div class="panel panel-default">
-					<div class="panel-heading" style="text-align:center;">
-						<h3 class="panel-title"><b>Current MAS Studies Waiting to be Archived (Refreshed Hourly)</b></h3>
-					</div>
-					<div class="panel-body">
-						<div class="chart">
-							<div id="chart" style="height:450px; width:1000px;"></div>							
+				<div class="col-mid-6">
+				<!-- BAR CHART -->
+					<div class="panel panel-default">
+						<div class="panel-heading" style="text-align:center;">
+							<h3 class="panel-title"><b>Current MAS Studies Waiting to be Archived (Refreshed Hourly)</b></h3>
 						</div>
-						<!--<button type="button" onclick="loaddata()">Back</button>-->
-						<div style="text-align:center;">
-						<button class="btn btn-primary " type="button" onclick="loaddata()">Back</button>
+						<div class="panel-body"> 
+							<div class="chart">
+								<div id="chart" style="height:650px;"></div>
+							</div> 
+							<div style="text-align:center;">
+							<button class="btn btn-primary " type="button" onclick="loaddata()">Back</button>
+							</div> 
 						</div>
-					</div>
-				</div> 
+					</div> 
+				</div>
 			</div>
-           </div> 
-		   
-
-          <!-- Your Page Content Here -->
-
-       <!-- </section><!-- /.content -->
-      </div><!-- /.content-wrapper --> 
-
+     </div> 
       <!-- Main Footer -->
       <footer class="main-footer">
         <!-- To the right -->
@@ -187,614 +142,61 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <!-- <div class="control-sidebar-bg"></div> -->
     </div><!-- ./wrapper -->
 
+
     <!-- REQUIRED JS SCRIPTS -->
 
     <!-- jQuery 2.1.4 -->
     <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
     <!-- Bootstrap 3.3.5 -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
-    <!-- chartjs -->
-	<script src="plugins/chartjs/Chart.js"></script>
     <!-- AdminLTE App -->
     <script src="dist/js/app.min.js"></script>
-	<!-- angularjs -->
-	<script src="bower_components/angular/angular.min.js"></script>
 	<!-- Load d3.js and c3.js -->
 	<script src="bower_components/d3/d3.min.js" charset="utf-8"></script>
 	<script src="bower_components/c3/c3.js"></script>
 	<script>
-	var playerdata = {
+	var mas = {
     0:[ 
 		['x','1/5/2016','1/6/2016','1/7/2016','1/8/2016','1/9/2016','1/10/2016','1/11/2016','1/12/2016','1/13/2016','1/14/2016','1/15/2016','1/16/2016','1/17/2016','1/18/2016',
 		'1/19/2016','1/20/2016','1/21/2016','1/22/2016','1/23/2016','1/24/2016','1/25/2016','1/26/2016','1/27/2016','1/28/2016','1/29/2016','1/30/2016','1/31/2016','2/1/2016','2/2/2016','2/3/2016','2/4/2016'],
-        ['Avg Waiting for flush',14,15.05,13.48,12.25,12.71,
-11,
-10.4,
-12,
-15.2,
-15.5,
-14.17,
-12.33,
-24.5,
-11.5,
-14.02,
-13.08,
-17.85,
-13.36,
-14.37,
-10.95,
-11.25,
-11.75,
-17.08,
-23.56,
-15.7,
-13.52,
-11.16,
-12.58,
-16.45,
-10.45,
-8.4,
-],
-		['Avg Not Archived',23.25,
-17.95,
-14.37,
-21.75,
-13.57,
-9.2,
-11.8,
-17,
-14.8,
-16.5,
-22.85,
-21.66,
-8,
-8.3125,
-16.63,
-21.33,
-19.05,
-13.67,
-10.125,
-8.13,
-8.2,
-12.2,
-17.25,
-20.34,
-21.7,
-15.91,
-8.125,
-13.91,
-18.45,
-17.54,
-16.94],
-		['Total',37.25,
-33,
-27.85,
-34,
-26.28,
-20.2,
-22.2,
-29,
-30,
-32,
-37.02,
-33.99,
-32.5,
-19.8125,
-30.65,
-34.41,
-36.9,
-27.03,
-24.495,
-19.08,
-19.45,
-23.95,
-34.33,
-43.9,
-37.4,
-29.43,
-19.285,
-26.49,
-34.9,
-27.99,
-25.34],
+        ['Avg Waiting for flush',14,15.05,13.48,12.25,12.71,11,10.4,12,15.2,15.5,14.17,12.33,24.5,11.5,14.02,13.08,17.85,13.36,14.37,10.95,11.25,11.75,17.08,23.56,15.7,13.52,11.16,12.58,16.45,10.45,8.4,],
+		['Avg Not Archived',23.25,17.95,14.37,21.75,13.57,9.2,11.8,17,14.8,16.5,22.85,21.66,8,8.3125,16.63,21.33,19.05,13.67,10.125,8.13,8.2,12.2,17.25,20.34,21.7,15.91,8.125,13.91,18.45,17.54,16.94],
+		['Total',37.25,33,27.85,34,26.28,20.2,22.2,29,30,32,37.02,33.99,32.5,19.8125,30.65,34.41,36.9,27.03,24.495,19.08,19.45,23.95,34.33,43.9,37.4,29.43,19.285,26.49,34.9,27.99,25.34],
     ],
 	1: [
 		['x','1/5/2016','1/6/2016','1/7/2016','1/8/2016','1/9/2016','1/10/2016','1/11/2016','1/12/2016','1/13/2016','1/14/2016','1/15/2016','1/16/2016','1/17/2016','1/18/2016',
 		'1/19/2016','1/20/2016','1/21/2016','1/22/2016','1/23/2016','1/24/2016','1/25/2016','1/26/2016','1/27/2016','1/28/2016','1/29/2016','1/30/2016','1/31/2016','2/1/2016','2/2/2016','2/3/2016','2/4/2016'],
-        ['Avg Waiting for flush',14,15.05,13.48,12.25,12.71,
-11,
-10.4,
-12,
-15.2,
-15.5,
-14.17,
-12.33,
-24.5,
-11.5,
-14.02,
-13.08,
-17.85,
-13.36,
-14.37,
-10.95,
-11.25,
-11.75,
-17.08,
-23.56,
-15.7,
-13.52,
-11.16,
-12.58,
-16.45,
-10.45,
-8.4,
-],
-		['Avg Not Archived',23.25,
-17.95,
-14.37,
-21.75,
-13.57,
-9.2,
-11.8,
-17,
-14.8,
-16.5,
-22.85,
-21.66,
-8,
-8.3125,
-16.63,
-21.33,
-19.05,
-13.67,
-10.125,
-8.13,
-8.2,
-12.2,
-17.25,
-20.34,
-21.7,
-15.91,
-8.125,
-13.91,
-18.45,
-17.54,
-16.94],
-		['Total',37.25,
-33,
-27.85,
-34,
-26.28,
-20.2,
-22.2,
-29,
-30,
-32,
-37.02,
-33.99,
-32.5,
-19.8125,
-30.65,
-34.41,
-36.9,
-27.03,
-24.495,
-19.08,
-19.45,
-23.95,
-34.33,
-43.9,
-37.4,
-29.43,
-19.285,
-26.49,
-34.9,
-27.99,
-25.34],
+        ['Avg Waiting for flush',14,15.05,13.48,12.25,12.71,11,10.4,12,15.2,15.5,14.17,12.33,24.5,11.5,14.02,13.08,17.85,13.36,14.37,10.95,11.25,11.75,17.08,23.56,15.7,13.52,11.16,12.58,16.45,10.45,8.4],
+		['Avg Not Archived',23.25,17.95,14.37,21.75,13.57,9.2,11.8,17,14.8,16.5,22.85,21.66,8,8.3125,16.63,21.33,19.05,13.67,10.125,8.13,8.2,12.2,17.25,20.34,21.7,15.91,8.125,13.91,18.45,17.54,16.94],
+		['Total',37.25,33,27.85,34,26.28,20.2,22.2,29,30,32,37.02,33.99,32.5,19.8125,30.65,34.41,36.9,27.03,24.495,19.08,19.45,23.95,34.33,43.9,37.4,29.43,19.285,26.49,34.9,27.99,25.34],
     ],
 	2: [
 		['x','1/5/2016','1/6/2016','1/7/2016','1/8/2016','1/9/2016','1/10/2016','1/11/2016','1/12/2016','1/13/2016','1/14/2016','1/15/2016','1/16/2016','1/17/2016','1/18/2016',
 		'1/19/2016','1/20/2016','1/21/2016','1/22/2016','1/23/2016','1/24/2016','1/25/2016','1/26/2016','1/27/2016','1/28/2016','1/29/2016','1/30/2016','1/31/2016','2/1/2016','2/2/2016','2/3/2016','2/4/2016'],
-        ['Avg Waiting for flush',11.25,
-14.5,
-15.22,
-14.25,
-16.28,
-12.6,
-12,
-13,
-18,
-15,
-14.71,
-13.66,
-17.5,
-14.7,
-14.4,
-15.54,
-16.6,
-17.56,
-15.33,
-13.6,
-13.5,
-13.6,
-15.8,
-19.1,
-15,
-16.21,
-18.2,
-17.45,
-20.5,
-12.54,
-10.27
-],
-		['Avg Not Archived',22.5,
-19.15,
-21.77,
-25.25,
-10.85,
-7.8,
-9.4,
-17.66,
-11.4,
-12.5,
-17,
-16.33,
-7,
-7.31,
-11.13,
-17.27,
-14.25,
-11.91,
-8.5,
-8.4,
-8.5,
-10.7,
-14,
-14.8,
-17.8,
-13.73,
-8.25,
-12.54,
-18.1,
-14.37,
-15.88
-
-],
-		['Total',33.75,
-33.65,
-36.99,
-39.5,
-27.13,
-20.4,
-21.4,
-30.66,
-29.4,
-27.5,
-31.71,
-29.99,
-24.5,
-22.01,
-25.53,
-32.81,
-30.85,
-29.47,
-23.83,
-22,
-22,
-24.3,
-29.8,
-33.9,
-32.8,
-29.94,
-26.45,
-29.99,
-38.6,
-26.91,
-26.15
-],
+        ['Avg Waiting for flush',11.25,14.5,15.22,14.25,16.28,12.6,12,13,18,15,14.71,13.66,17.5,14.7,14.4,15.54,16.6,17.56,15.33,13.6,13.5,13.6,15.8,19.1,15,16.21,18.2,17.45,20.5,12.54,10.27],
+		['Avg Not Archived',22.5,19.15,21.77,25.25,10.85,7.8,9.4,17.66,11.4,12.5,17,16.33,7,7.31,11.13,17.27,14.25,11.91,8.5,8.4,8.5,10.7,14,14.8,17.8,13.73,8.25,12.54,18.1,14.37,15.88],
+		['Total',33.75,33.65,36.99,39.5,27.13,20.4,21.4,30.66,29.4,27.5,31.71,29.99,24.5,22.01,25.53,32.81,30.85,29.47,23.83,22,22,24.3,29.8,33.9,32.8,29.94,26.45,29.99,38.6,26.91,26.15],
     ],
 	3: [
 		['x','1/5/2016','1/6/2016','1/7/2016','1/8/2016','1/9/2016','1/10/2016','1/11/2016','1/12/2016','1/13/2016','1/14/2016','1/15/2016','1/16/2016','1/17/2016','1/18/2016',
 		'1/19/2016','1/20/2016','1/21/2016','1/22/2016','1/23/2016','1/24/2016','1/25/2016','1/26/2016','1/27/2016','1/28/2016','1/29/2016','1/30/2016','1/31/2016','2/1/2016','2/2/2016','2/3/2016','2/4/2016'],
-       ['Avg Waiting for flush',11.25,
-14.5,
-15.22,
-14.25,
-16.28,
-12.6,
-12,
-13,
-18,
-15,
-14.71,
-13.66,
-17.5,
-14.7,
-14.4,
-15.54,
-16.6,
-17.56,
-15.33,
-13.6,
-13.5,
-13.6,
-15.8,
-19.1,
-15,
-16.21,
-18.2,
-17.45,
-20.5,
-12.54,
-10.27
-],
-		['Avg Not Archived',22.5,
-19.15,
-21.77,
-25.25,
-10.85,
-7.8,
-9.4,
-17.66,
-11.4,
-12.5,
-17,
-16.33,
-7,
-7.31,
-11.13,
-17.27,
-14.25,
-11.91,
-8.5,
-8.4,
-8.5,
-10.7,
-14,
-14.8,
-17.8,
-13.73,
-8.25,
-12.54,
-18.1,
-14.37,
-15.88
-
-],
-		['Total',33.75,
-33.65,
-36.99,
-39.5,
-27.13,
-20.4,
-21.4,
-30.66,
-29.4,
-27.5,
-31.71,
-29.99,
-24.5,
-22.01,
-25.53,
-32.81,
-30.85,
-29.47,
-23.83,
-22,
-22,
-24.3,
-29.8,
-33.9,
-32.8,
-29.94,
-26.45,
-29.99,
-38.6,
-26.91,
-26.15
-],
+        ['Avg Waiting for flush',11.25,14.5,15.22,14.25,16.28,12.6,12,13,18,15,14.71,13.66,17.5,14.7,14.4,15.54,16.6,17.56,15.33,13.6,13.5,13.6,15.8,19.1,15,16.21,18.2,17.45,20.5,12.54,10.27],
+		['Avg Not Archived',22.5,19.15,21.77,25.25,10.85,7.8,9.4,17.66,11.4,12.5,17,16.33,7,7.31,11.13,17.27,14.25,11.91,8.5,8.4,8.5,10.7,14,14.8,17.8,13.73,8.25,12.54,18.1,14.37,15.88],
+		['Total',33.75,33.65,36.99,39.5,27.13,20.4,21.4,30.66,29.4,27.5,31.71,29.99,24.5,22.01,25.53,32.81,30.85,29.47,23.83,22,22,24.3,29.8,33.9,32.8,29.94,26.45,29.99,38.6,26.91,26.15],
     ],
 	4: [
 		['x','1/5/2016','1/6/2016','1/7/2016','1/8/2016','1/9/2016','1/10/2016','1/11/2016','1/12/2016','1/13/2016','1/14/2016','1/15/2016','1/16/2016','1/17/2016','1/18/2016',
 		'1/19/2016','1/20/2016','1/21/2016','1/22/2016','1/23/2016','1/24/2016','1/25/2016','1/26/2016','1/27/2016','1/28/2016','1/29/2016','1/30/2016','1/31/2016','2/1/2016','2/2/2016','2/3/2016','2/4/2016'],
-        ['Avg Waiting for flush',11.25,
-14.5,
-15.22,
-14.25,
-16.28,
-12.6,
-12,
-13,
-18,
-15,
-14.71,
-13.66,
-17.5,
-14.7,
-14.4,
-15.54,
-16.6,
-17.56,
-15.33,
-13.6,
-13.5,
-13.6,
-15.8,
-19.1,
-15,
-16.21,
-18.2,
-17.45,
-20.5,
-12.54,
-10.27
-],
-		['Avg Not Archived',22.5,
-19.15,
-21.77,
-25.25,
-10.85,
-7.8,
-9.4,
-17.66,
-11.4,
-12.5,
-17,
-16.33,
-7,
-7.31,
-11.13,
-17.27,
-14.25,
-11.91,
-8.5,
-8.4,
-8.5,
-10.7,
-14,
-14.8,
-17.8,
-13.73,
-8.25,
-12.54,
-18.1,
-14.37,
-15.88
-
-],
-		['Total',33.75,
-33.65,
-36.99,
-39.5,
-27.13,
-20.4,
-21.4,
-30.66,
-29.4,
-27.5,
-31.71,
-29.99,
-24.5,
-22.01,
-25.53,
-32.81,
-30.85,
-29.47,
-23.83,
-22,
-22,
-24.3,
-29.8,
-33.9,
-32.8,
-29.94,
-26.45,
-29.99,
-38.6,
-26.91,
-26.15
-],
+        ['Avg Waiting for flush',11.25,14.5,15.22,14.25,16.28,12.6,12,13,18,15,14.71,13.66,17.5,14.7,14.4,15.54,16.6,17.56,15.33,13.6,13.5,13.6,15.8,19.1,15,16.21,18.2,17.45,20.5,12.54,10.27],
+		['Avg Not Archived',22.5,19.15,21.77,25.25,10.85,7.8,9.4,17.66,11.4,12.5,17,16.33,7,7.31,11.13,17.27,14.25,11.91,8.5,8.4,8.5,10.7,14,14.8,17.8,13.73,8.25,12.54,18.1,14.37,15.88],
+		['Total',33.75,33.65,36.99,39.5,27.13,20.4,21.4,30.66,29.4,27.5,31.71,29.99,24.5,22.01,25.53,32.81,30.85,29.47,23.83,22,22,24.3,29.8,33.9,32.8,29.94,26.45,29.99,38.6,26.91,26.15],
     ],
 	5: [
 		['x','1/5/2016','1/6/2016','1/7/2016','1/8/2016','1/9/2016','1/10/2016','1/11/2016','1/12/2016','1/13/2016','1/14/2016','1/15/2016','1/16/2016','1/17/2016','1/18/2016',
 		'1/19/2016','1/20/2016','1/21/2016','1/22/2016','1/23/2016','1/24/2016','1/25/2016','1/26/2016','1/27/2016','1/28/2016','1/29/2016','1/30/2016','1/31/2016','2/1/2016','2/2/2016','2/3/2016','2/4/2016'],
-        ['Avg Waiting for flush',11.25,
-14.5,
-15.22,
-14.25,
-16.28,
-12.6,
-12,
-13,
-18,
-15,
-14.71,
-13.66,
-17.5,
-14.7,
-14.4,
-15.54,
-16.6,
-17.56,
-15.33,
-13.6,
-13.5,
-13.6,
-15.8,
-19.1,
-15,
-16.21,
-18.2,
-17.45,
-20.5,
-12.54,
-10.27
-],
-		['Avg Not Archived',22.5,
-19.15,
-21.77,
-25.25,
-10.85,
-7.8,
-9.4,
-17.66,
-11.4,
-12.5,
-17,
-16.33,
-7,
-7.31,
-11.13,
-17.27,
-14.25,
-11.91,
-8.5,
-8.4,
-8.5,
-10.7,
-14,
-14.8,
-17.8,
-13.73,
-8.25,
-12.54,
-18.1,
-14.37,
-15.88
-
-],
-		['Total',33.75,
-33.65,
-36.99,
-39.5,
-27.13,
-20.4,
-21.4,
-30.66,
-29.4,
-27.5,
-31.71,
-29.99,
-24.5,
-22.01,
-25.53,
-32.81,
-30.85,
-29.47,
-23.83,
-22,
-22,
-24.3,
-29.8,
-33.9,
-32.8,
-29.94,
-26.45,
-29.99,
-38.6,
-26.91,
-26.15
-],
+        ['Avg Waiting for flush',11.25,14.5,15.22,14.25,16.28,12.6,12,13,18,15,14.71,13.66,17.5,14.7,14.4,15.54,16.6,17.56,15.33,13.6,13.5,13.6,15.8,19.1,15,16.21,18.2,17.45,20.5,12.54,10.27],
+		['Avg Not Archived',22.5,19.15,21.77,25.25,10.85,7.8,9.4,17.66,11.4,12.5,17,16.33,7,7.31,11.13,17.27,14.25,11.91,8.5,8.4,8.5,10.7,14,14.8,17.8,13.73,8.25,12.54,18.1,14.37,15.88],
+		['Total',33.75,33.65,36.99,39.5,27.13,20.4,21.4,30.66,29.4,27.5,31.71,29.99,24.5,22.01,25.53,32.81,30.85,29.47,23.83,22,22,24.3,29.8,33.9,32.8,29.94,26.45,29.99,38.6,26.91,26.15],
     ],
  }
 barchart();
@@ -820,7 +222,7 @@ function barchart(){
 					data: {
 							x: 'x',
 							xFormat: '%m/%d/%Y',
-							columns: playerdata[d.index],
+							columns: mas[d.index],
 							type: 'line',
 						},
 					 grid: {

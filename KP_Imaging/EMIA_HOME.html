@@ -59,11 +59,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			  <ul class="nav navbar-nav">
 				<li><a href="MII_home.html">MII home <span class="sr-only">(current)</span></a></li>
-				<li><a href="#">EMIA</a></li>
+				<li class="active"><a href="#">EMIA</a></li>
 				<li class="dropdown">
                     <a href="RIS.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">RIS<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-					<li class="active"><a href="RIS.html">RIS Home</a></li>
+					<li><a href="RIS.html">RIS Home</a></li>
 					<li><a href="#">SCAL</a></li>
                     <li><a href="#">COL</a></li>
                     <li><a href="#">MAS</a></li>
@@ -110,33 +110,24 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- <section class="content"> -->
             <div class="row">
                  <div class="panel-body">
-                            <div class="col-md-2">
-                                <label>Earliest Date: 8/5/2015</label>
-                                <div class="input-group input-daterange">
-                                    <input type="text" class="form-control" value="08-05-2015" data-provide="datepicker">
-                                    <div class="input-group-addon">
-                                        <span class="glyphicon glyphicon-th"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-md-2">
-                                <label>Earliest Date: 2/15/2016</label>
-                                <div class="input-group input-daterange">
-                                    <input type="text" class="form-control" value="02-15-2016" data-provide="datepicker">
-                                    <div class="input-group-addon">
-                                        <span class="glyphicon glyphicon-th"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div>
+                        <h2 style="text-align:center;"><b>Total Images in EMIA: 7,099,274,833</b></h2>
+                     </div>
+                     <div class="col-md-4"><h5 style="text-align:center;"><b>Total NDC studies: 99,685,825</b></h5></div>
+                     <div class="col-md-4"><h5 style="text-align:center;"><b>Total SSDC studies: 98,242,746</b></h5></div>
+                     <div class="col-md-4"><h5 style="text-align:center;"><b>Total studies left to sync: 1,443,079</b></h5></div>
+                     <hr>
+                      <div class="col-md-4"><h5 style="text-align:center;">Total NCAL NDC studies: 51,098,367</h5><h5 style="text-align:center;">Total SCAL NDC studies: 31,376,851</h5><h5 style="text-align:center;">Total ROC NDC studies: 17,210,607</h5></div>
+                      <div class="col-md-4"><h5 style="text-align:center;">Total NCAL SSDC studies: 49,902,831</h5><h5 style="text-align:center;">Total SCAL SSDC studies: 31,142,552</h5><h5 style="text-align:center;">Total ROC SSDC studies: 17,197,363</h5></div>
+                      <div class="col-md-4"><h5 style="text-align:center;">NCAL studies left to sync: 1,195,536</h5><h5 style="text-align:center;">SCAL studies left to sync: 1,443,079</h5><h5 style="text-align:center;">ROC studies left to sync: 13,244</h5></div>
+                </div>
             </div>
 			<div class="row">
 				<div class="col-mid-6">
 				<!-- BAR CHART -->
 					<div class="panel panel-default">
 						<div class="panel-heading" style="text-align:center;">
-							<h3 class="panel-title"><b>RIS Orders per Day</b></h3>
+							<h3 class="panel-title"><b>RDB Studies Over Time</b></h3>
 						</div>
 						<div class="panel-body"> 
                             <div class="chart">
@@ -185,19 +176,18 @@ function barchart(){
 		var chart = c3.generate({  // facilities bar chart
 			bindto: '#chart',
 			data: {
-				x: 'DateTime',
-				xFormat: '%m/%d/%Y',
-				url:'data/RIS.csv',
+				x: 'MONTH_YEAR',
+				xFormat: '%m-%Y',
+				url:'data/EMIA_HOME.csv',
 				type: 'line',
 				names: {
-						SCAL: 'SCAL',
-						MAS: 'MAS',
-						CO: 'CO'
+						NCAL_NDC_RDB: 'NCAL NDC RDB',
+                        NCAL_SSDC_RDB: 'NCAL SSDC RDB',
+                        ROC_NDC_RDB: 'ROC NDC RDB',
+                        ROC_SSDC_RDB: 'ROC SSDC RDB',
+                        SCAL_NDC_RDB: 'SCAL NDC RDB',
+                        SCAL_SSDC_RDB: 'SCAL SSDC RDB'
 					},
-				hide: ['REGION','FACILITY'],
-				},
-				legend: {
-					hide: ['REGION','FACILITY']
 				},
 				grid: {
 						x: {
@@ -211,22 +201,22 @@ function barchart(){
 							x: {
 								type: 'timeseries',
 								tick: {
-										format: '%m/%d/%Y'
+										format: '%m-%Y'
 									},
 								label: {
-									text: 'Date',
+									text: 'Time',
 									position: 'outer-center'
 								}
 							},
 							y:{
 								label: {
-										text: 'Order Count',
+										text: 'Studies',
 										position: 'outer-middle'
 									}
 							}
 					},
 					color: {
-							pattern: ['#ffff00', '#1a53ff', ' #33cc33', '#ff6600', '#0066ff', '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5', '#8c564b', '#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f', '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5']
+							pattern: ['#ffff00', ' #33cc33', '#ff6600', '#0066ff', '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5', '#8c564b', '#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f', '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5']
 					},
 				
 			});
@@ -239,7 +229,16 @@ function loaddata(){
 	</script>
 	<style>
 	.c3-line {
-    stroke-width: 4px;
+    stroke-width: 3px;
+}
+hr {
+    display: block;
+    height: 0px;
+    border: 0;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0; 
 }
 
 	</style>

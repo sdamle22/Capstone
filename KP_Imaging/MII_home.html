@@ -7,11 +7,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>MII Dashboard</title>
+    <title>CVIS Home</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-	<!-- angular-chart css 
-	<link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.min.css"> -->
     <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <!-- Font Awesome -->
@@ -37,27 +35,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <![endif]-->
   </head>
   
-  <!--
-  BODY TAG OPTIONS:
-  =================
-  Apply one or more of the following classes to get the
-  desired effect
-  |---------------------------------------------------------|
-  | SKINS         | skin-blue                               |
-  |               | skin-black                              |
-  |               | skin-purple                             |
-  |               | skin-yellow                             |
-  |               | skin-red                                |
-  |               | skin-green                              |
-  |---------------------------------------------------------|
-  |LAYOUT OPTIONS | fixed                                   |
-  |               | layout-boxed                            |
-  |               | layout-top-nav                          |
-  |               | sidebar-collapse                        |
-  |               | sidebar-mini                            |
-  |---------------------------------------------------------|
-  -->
-  <body class="hold-transition skin-blue-light layout-top-nav">
+
+ <body class="hold-transition skin-blue-light layout-top-nav">
     <div class="wrapper">
 
       <!-- Main Header -->
@@ -78,10 +57,26 @@ scratch. This page gets rid of all links and provides the needed markup only.
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			  <ul class="nav navbar-nav">
-				<li class="active"><a href="#">MII home <span class="sr-only">(current)</span></a></li>
+				<li><a href="MII_home.html">MII home <span class="sr-only">(current)</span></a></li>
 				<li><a href="#">EMIA</a></li>
-				<li><a href="#">RIS</a></li>
-				<li><a href="#">CVIS</a></li>
+				<li class="dropdown">
+                    <a href="RIS.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">RIS<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+					<li><a href="RIS.html">RIS Home</a></li>
+					<li><a href="#">SCAL</a></li>
+                    <li><a href="#">COL</a></li>
+                    <li><a href="#">MAS</a></li>
+                    <li><a href="#">RIS Tools</a></li>
+				    </ul>
+                </li>
+				<li class="dropdown">
+                  <a href="HOME_KP.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CVIS<span class="caret"></span></a>
+				  <ul class="dropdown-menu">
+					<li><a href="HOME_KP.html">CVIS Home</a></li>
+					<li><a href="SCAL_KP.html">SCAL</a></li>
+                    <li><a href="MAS_KP.html">MAS</a></li>
+				  </ul>
+                </li>
 				<li class="dropdown">
 				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More Applications <span class="caret"></span></a>
 				  <ul class="dropdown-menu">
@@ -117,14 +112,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
 				<!-- BAR CHART -->
 					<div class="panel panel-default">
 						<div class="panel-heading" style="text-align:center;">
-							<h3 class="panel-title"><b>Current SCAL Studies Waiting to be Archived (Refreshed Hourly)</b></h3>
+							<h3 class="panel-title"><b>MII Dashboard</b></h3>
 						</div>
 						<div class="panel-body"> 
 							<div class="chart">
-								<div id="chart" style="height:650px;"></div>
-							</div> 
-							<div style="text-align:center;">
-							<button class="btn btn-primary " type="button" onclick="loaddata()">Back</button>
+                                <img src="img/MII.jpg" style="height:650px;"/>
 							</div> 
 						</div>
 					</div> 
@@ -146,6 +138,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <!-- <div class="control-sidebar-bg"></div> -->
     </div><!-- ./wrapper -->
 
+
     <!-- REQUIRED JS SCRIPTS -->
 
     <!-- jQuery 2.1.4 -->
@@ -157,77 +150,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
 	<!-- Load d3.js and c3.js -->
 	<script src="bower_components/d3/d3.min.js" charset="utf-8"></script>
 	<script src="bower_components/c3/c3.js"></script>
-	<script>
-	/*if (screen.height > 1000) {
-    document.getElementById("chart").style.height = "1860px";
-	}*/
-barchart();
-function barchart(){
-		var chart = c3.generate({  // facilities bar chart
-			bindto: '#chart',
-			data: {
-				x: 'DateTime',
-				xFormat: '%m/%d/%Y',
-				url:'data/Baldwinfull.csv',
-				type: 'line',
-				names: {
-						NotArchived: 'Not Archived',
-						WaitingForFlush: 'Waiting For Flush',
-						Total: 'Total'
-					},
-				hide: ['REGION','FACILITY'],
-				},
-				legend: {
-					hide: ['REGION','FACILITY']
-				},
-				grid: {
-						x: {
-								show: true
-							},
-						y: {
-								show: true
-							}
-						},
-				axis: {
-							x: {
-								type: 'timeseries',
-								tick: {
-										format: '%m/%d/%Y'
-									},
-								label: {
-									text: 'Date',
-									position: 'outer-center'
-								}
-							},
-							y:{
-								label: {
-										text: 'Number of Studies',
-										position: 'outer-middle'
-									}
-							}
-					},
-					color: {
-							pattern: ['#ffff00', '#1a53ff', ' #800000', '#ffbb78', '#2ca02c', '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5', '#8c564b', '#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f', '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5']
-					},
-				
-			});
 
-}
-
-function loaddata(){
-	barchart();
-}
-	</script>
-	<style>
-	.c3-line {
-    stroke-width: 4px;
-}
-
-	</style>
-  
     <!-- Optionally, you can add Slimscroll and FastClick plugins.
          Both of these plugins are recommended to enhance the
          user experience. Slimscroll is required when using the
          fixed layout. -->
+     <style>
+        img {
+    width: 100%;
+    height: auto;
+         }
+     </style>
   </body>
 </html>
