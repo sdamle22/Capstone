@@ -19,7 +19,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Theme style -->
     <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
     <!-- Bootstrap datepicker css -->
-    <link rel="stylesheet" href="plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css">
+   <!--<link rel="stylesheet" href="plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css"> -->
 	<!-- Load c3.css -->
 	<link href="bower_components/c3/c3.css" rel="stylesheet" type="text/css">
     <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
@@ -37,26 +37,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <![endif]-->
   </head>
   
-  <!--
-  BODY TAG OPTIONS:
-  =================
-  Apply one or more of the following classes to get the
-  desired effect
-  |---------------------------------------------------------|
-  | SKINS         | skin-blue                               |
-  |               | skin-black                              |
-  |               | skin-purple                             |
-  |               | skin-yellow                             |
-  |               | skin-red                                |
-  |               | skin-green                              |
-  |---------------------------------------------------------|
-  |LAYOUT OPTIONS | fixed                                   |
-  |               | layout-boxed                            |
-  |               | layout-top-nav                          |
-  |               | sidebar-collapse                        |
-  |               | sidebar-mini                            |
-  |---------------------------------------------------------|
-  -->
   <body class="hold-transition skin-blue-light layout-top-nav">
     <div class="wrapper">
 
@@ -78,10 +58,26 @@ scratch. This page gets rid of all links and provides the needed markup only.
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			  <ul class="nav navbar-nav">
-				<li><a href="#">MII home <span class="sr-only">(current)</span></a></li>
+				<li><a href="MII_home.html">MII home <span class="sr-only">(current)</span></a></li>
 				<li><a href="#">EMIA</a></li>
-				<li class="active"><a href="#">RIS</a></li>
-				<li><a href="#">CVIS</a></li>
+				<li class="dropdown">
+                    <a href="RIS.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">RIS<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+					<li class="active"><a href="RIS.html">RIS Home</a></li>
+					<li><a href="#">SCAL</a></li>
+                    <li><a href="#">COL</a></li>
+                    <li><a href="#">MAS</a></li>
+                    <li><a href="#">RIS Tools</a></li>
+				    </ul>
+                </li>
+				<li class="dropdown">
+                  <a href="HOME_KP.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CVIS<span class="caret"></span></a>
+				  <ul class="dropdown-menu">
+					<li><a href="HOME_KP.html">CVIS Home</a></li>
+					<li><a href="SCAL_KP.html">SCAL</a></li>
+                    <li><a href="MAS_KP.html">MAS</a></li>
+				  </ul>
+                </li>
 				<li class="dropdown">
 				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More Applications <span class="caret"></span></a>
 				  <ul class="dropdown-menu">
@@ -108,9 +104,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 		</nav>
       </header>
      
-	 
       <!-- Content Wrapper. Contains page content -->
-     <div class="content-wrapper"> 
+        <div class="content-wrapper"> 
         <!-- Main content -->
         <!-- <section class="content"> -->
             <div class="row">
@@ -141,17 +136,40 @@ scratch. This page gets rid of all links and provides the needed markup only.
 				<!-- BAR CHART -->
 					<div class="panel panel-default">
 						<div class="panel-heading" style="text-align:center;">
-							<h3 class="panel-title"><b>RIS Orders per Day for all SCAL locations</b></h3>
+							<h3 class="panel-title"><b>Total Current Users in RIS SCAL: 1558</b></h3>
+							<h3 class="panel-title"><b>Total Current Sessions in RIS SCAL: 1675</b></h3>
 						</div>
 						<div class="panel-body"> 
                             <div class="chart">
-                                <div id="chart" style="height:690px;" ></div>
+                                <div id="chart" style="height:250px;" ></div>
                             </div> 
-						</div>
+						</div>				
 					</div> 
 				</div>
 			</div>
+			
+			
+			
+			<!-- duplicate -->
+			<div class="row">
+				<div class="col-mid-6">
+				<!-- Line CHART -->
+					<div class="panel panel-default">
+						<div class="panel-heading" style="text-align:center;">
+							<h3 class="panel-title"><b>CPU Utilization Over Time</b></h3>
+						
+						</div>
+						<div class="panel-body"> 
+                            <div class="chart">
+                                <div id="chart1" style="height:250px;" ></div>
+                            </div> 
+						</div>				
+					</div> 
+				</div>
+			</div>
+
      </div> 
+        
       <!-- Main Footer -->
       <footer class="main-footer">
         <!-- To the right -->
@@ -172,7 +190,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- jQuery 2.1.4 -->
     <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
     <!-- Bootstrap datepicker -->
-    <script src="plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <!--<script src="plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script> -->
     <!-- Bootstrap 3.3.5 -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <!-- AdminLTE App -->
@@ -181,39 +199,22 @@ scratch. This page gets rid of all links and provides the needed markup only.
 	<script src="bower_components/d3/d3.min.js" charset="utf-8"></script>
 	<script src="bower_components/c3/c3.js"></script>
 	<script>
-	/*if (screen.height > 1000) {
-    document.getElementById("chart").style.height = "1860px";
-	}*/
+        
 barchart();
-   $('.datepicker').datepicker();
+barchart2();
+   //$('.datepicker').datepicker();
     
+
 function barchart(){
 		var chart = c3.generate({  // facilities bar chart
 			bindto: '#chart',
 			data: {
-				x: 'DateTime',
-				xFormat: '%m/%d/%Y',
-				url:'data/RIS_SCAL_ALL_Cities.csv',
-				type: 'line',
-				names: {
-						AntelopeValley: 'Antelope Valley',
-						Baldwin_Park: 'Baldwin_Park',
-						Bellflower: 'Bellflower',
-						Fontana: 'Fontana',
-						Harbor_City: 'Harbor City',
-						LAMC: 'LAMC',
-						Orange_County: 'Orange_County',
-						Panorama_City: 'Panorama City',
-						Riverside: 'Riverside',
-						San_Diego: 'San Diego',
-						West_LA: 'West LA',
-						WoodLand_Hills: 'WoodLand Hills'
-					},
+				x: 'WN',				
+				url:'data/RIS_per.csv',
+				type: 'bar',				
 				hide: ['REGION','FACILITY'],
 				},
-				legend: {
-					hide: ['REGION','FACILITY']
-				},
+				
 				grid: {
 						x: {
 								show: true
@@ -223,37 +224,74 @@ function barchart(){
 							}
 						},
 				axis: {
+							rotated: true,
+				
 							x: {
-								type: 'timeseries',
-								tick: {
-										format: '%m/%d/%Y'
-									},
+								type : 'category',
 								label: {
-									text: 'Date',
+									text: 'Web server names',
 									position: 'outer-center'
 								}
 							},
 							y:{
 								label: {
-										text: 'Order Count',
+										//text: 'Open sessions',
 										position: 'outer-middle'
 									}
 							}
 					},
 					color: {
-							pattern: ['#ffff00', '#1a53ff', ' #33cc33', '#ff6600', '#0066ff', '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5', '#8c564b', '#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f', '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5']
+							pattern: ['#1a53ff', ' #33cc33', '#ff6600', '#0066ff', '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5', '#8c564b', '#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f', '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5']
 					},
 				
 			});
+			
+	
+			
+
 }
+
+			
+
+			
+function barchart2(){
+
+	var chart1 = c3.generate({
+	bindto: '#chart1',
+     data: {
+        columns: [
+            ['Time', 30, 200, 100, 400, 150, 250]
+            
+        ]
+    },
+    axis: {
+        x: {
+            
+        },
+        y: {
+            label: 'CPU Percentage'
+        }
+        
+    }
+	});
+
+}
+
+
+/*
 function loaddata(){
 	barchart();
+	barchart2();
+	//add here
 }
+*/
+
 	</script>
 	<style>
 	.c3-line {
-    stroke-width: 4px;
+    stroke-width: 1px;
 }
+
 	</style>
   
     <!-- Optionally, you can add Slimscroll and FastClick plugins.
