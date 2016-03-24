@@ -19,7 +19,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Theme style -->
     <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
     <!-- Bootstrap datepicker css -->
-    <link rel="stylesheet" href="plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css">
+   <!--<link rel="stylesheet" href="plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css"> -->
 	<!-- Load c3.css -->
 	<link href="bower_components/c3/c3.css" rel="stylesheet" type="text/css">
     <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
@@ -59,13 +59,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			  <ul class="nav navbar-nav">
 				<li><a href="MII_home.html">MII home <span class="sr-only">(current)</span></a></li>
-				<li class="active"><a href="EMIA_HOME.html">EMIA</a></li>
+				<li><a href="EMIA_HOME.html">EMIA</a></li>
 				<li class="dropdown">
                     <a href="RIS.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">RIS<span class="caret"></span></a>
                     <ul class="dropdown-menu">
 					<li><a href="RIS.html">RIS Home</a></li>
                     <li role="separator" class="divider"></li>
-                    <li><a href="RIS_Performance.html">SCAL Performance</a></li>
+                    <li class="active"><a href="RIS_Performance.html">SCAL Performance</a></li>
                     <li><a href="RIS_SCAL_MONITOR.html">SCAL Monitor</a></li>
                     <li><a href="RIS_GRID.html">SCAL Reports</a></li>
                     <li role="separator" class="divider"></li>
@@ -120,33 +120,64 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- <section class="content"> -->
             <div class="row">
                  <div class="panel-body">
-                    <div>
-                        <h2 style="text-align:center;"><b>Total Images in EMIA: 7,099,274,833</b></h2>
-                     </div>
-                     <div class="col-md-4"><h5 style="text-align:center;"><b>Total NDC studies: 99,685,825</b></h5></div>
-                     <div class="col-md-4"><h5 style="text-align:center;"><b>Total SSDC studies: 98,242,746</b></h5></div>
-                     <div class="col-md-4"><h5 style="text-align:center;"><b>Total studies left to sync: 1,443,079</b></h5></div>
-                     <hr>
-                      <div class="col-md-4"><h5 style="text-align:center;">Total NCAL NDC studies: 51,098,367</h5><h5 style="text-align:center;">Total SCAL NDC studies: 31,376,851</h5><h5 style="text-align:center;">Total ROC NDC studies: 17,210,607</h5></div>
-                      <div class="col-md-4"><h5 style="text-align:center;">Total NCAL SSDC studies: 49,902,831</h5><h5 style="text-align:center;">Total SCAL SSDC studies: 31,142,552</h5><h5 style="text-align:center;">Total ROC SSDC studies: 17,197,363</h5></div>
-                      <div class="col-md-4"><h5 style="text-align:center;">NCAL studies left to sync: 1,195,536</h5><h5 style="text-align:center;">SCAL studies left to sync: 1,443,079</h5><h5 style="text-align:center;">ROC studies left to sync: 13,244</h5></div>
-                </div>
+                            <div class="col-md-2">
+                                <label>Earliest Date: 8/5/2015</label>
+                                <div class="input-group input-daterange">
+                                    <input type="text" class="form-control" value="08-05-2015" data-provide="datepicker">
+                                    <div class="input-group-addon">
+                                        <span class="glyphicon glyphicon-th"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-2">
+                                <label>Earliest Date: 2/15/2016</label>
+                                <div class="input-group input-daterange">
+                                    <input type="text" class="form-control" value="02-15-2016" data-provide="datepicker">
+                                    <div class="input-group-addon">
+                                        <span class="glyphicon glyphicon-th"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
             </div>
 			<div class="row">
 				<div class="col-mid-6">
 				<!-- BAR CHART -->
 					<div class="panel panel-default">
 						<div class="panel-heading" style="text-align:center;">
-							<h3 class="panel-title"><b>RDB Studies Over Time</b></h3>
+							<h3 class="panel-title"><b>Total Current Users in RIS SCAL: 1558</b></h3>
+							<h3 class="panel-title"><b>Total Current Sessions in RIS SCAL: 1675</b></h3>
 						</div>
 						<div class="panel-body"> 
                             <div class="chart">
-                                <div id="chart" style="height:650px;" ></div>
+                                <div id="chart" style="height:250px;" ></div>
                             </div> 
-						</div>
+						</div>				
 					</div> 
 				</div>
 			</div>
+			
+			
+			
+			<!-- duplicate -->
+			<div class="row">
+				<div class="col-mid-6">
+				<!-- Line CHART -->
+					<div class="panel panel-default">
+						<div class="panel-heading" style="text-align:center;">
+							<h3 class="panel-title"><b>CPU Utilization Over Time</b></h3>
+						
+						</div>
+						<div class="panel-body"> 
+                            <div class="chart">
+                                <div id="chart1" style="height:250px;" ></div>
+                            </div> 
+						</div>				
+					</div> 
+				</div>
+			</div>
+
      </div> 
         
       <!-- Main Footer -->
@@ -169,7 +200,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- jQuery 2.1.4 -->
     <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
     <!-- Bootstrap datepicker -->
-    <script src="plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <!--<script src="plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script> -->
     <!-- Bootstrap 3.3.5 -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <!-- AdminLTE App -->
@@ -180,25 +211,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
 	<script>
         
 barchart();
-   $('.datepicker').datepicker();
+barchart2();
+   //$('.datepicker').datepicker();
     
+
 function barchart(){
 		var chart = c3.generate({  // facilities bar chart
 			bindto: '#chart',
 			data: {
-				x: 'MONTH_YEAR',
-				xFormat: '%m-%Y',
-				url:'data/EMIA_HOME.csv',
-				type: 'line',
-				names: {
-						NCAL_NDC_RDB: 'NCAL NDC RDB',
-                        NCAL_SSDC_RDB: 'NCAL SSDC RDB',
-                        ROC_NDC_RDB: 'ROC NDC RDB',
-                        ROC_SSDC_RDB: 'ROC SSDC RDB',
-                        SCAL_NDC_RDB: 'SCAL NDC RDB',
-                        SCAL_SSDC_RDB: 'SCAL SSDC RDB'
-					},
+				x: 'WN',				
+				url:'data/RIS_per.csv',
+				type: 'bar',				
+				hide: ['REGION','FACILITY'],
 				},
+				
 				grid: {
 						x: {
 								show: true
@@ -208,47 +234,72 @@ function barchart(){
 							}
 						},
 				axis: {
+							rotated: true,
+				
 							x: {
-								type: 'timeseries',
-								tick: {
-										format: '%m-%Y'
-									},
+								type : 'category',
 								label: {
-									text: 'Time',
+									text: 'Web server names',
 									position: 'outer-center'
 								}
 							},
 							y:{
 								label: {
-										text: 'Studies',
+										//text: 'Open sessions',
 										position: 'outer-middle'
 									}
 							}
 					},
 					color: {
-							pattern: ['#ffff00', ' #33cc33', '#ff6600', '#0066ff', '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5', '#8c564b', '#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f', '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5']
+							pattern: ['#1a53ff', ' #33cc33', '#ff6600', '#0066ff', '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5', '#8c564b', '#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f', '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5']
 					},
 				
 			});
+			
+	
+			
 
 }
 
+			
+
+			
+function barchart2(){
+
+	var chart1 = c3.generate({
+	bindto: '#chart1',
+     data: {
+        columns: [
+            ['Time', 30, 200, 100, 400, 150, 250]
+            
+        ]
+    },
+    axis: {
+        x: {
+            
+        },
+        y: {
+            label: 'CPU Percentage'
+        }
+        
+    }
+	});
+
+}
+
+
+/*
 function loaddata(){
 	barchart();
+	barchart2();
+	//add here
 }
+*/
+
 	</script>
 	<style>
 	.c3-line {
-    stroke-width: 3px;
-}
-hr {
-    display: block;
-    height: 0px;
-    border: 0;
-    width: 100%;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0; 
+    stroke-width: 1px;
 }
 
 	</style>
